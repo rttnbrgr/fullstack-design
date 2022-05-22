@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: pink;
+  background: blue;
+  /*  */
+}
+
+.layout-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  position: relative;
+  border: 2px solid pink;
+}
+
+@keyframes gradient-scroll {
+  0% {
+    /* transform: rotate(0turn) scale(1); */
+    transform: scale(1);
+    /* transition: all 2000ms; */
+    background-image: linear-gradient(
+      to right,
+      var(--color-orange),
+      var(--color-green)
+    );
+    background-image: linear-gradient(to right, orange, green);
+  }
+  33% {
+    transform: scale(1.5);
+    background-image: linear-gradient(
+      to right,
+      var(--color-green),
+      var(--color-blue)
+    );
+    background-image: linear-gradient(to right, green, blue);
+  }
+  66% {
+    background-image: linear-gradient(
+      to right,
+      var(--color-blue),
+      var(--color-purple)
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      to right,
+      var(--color-purple),
+      var(--color-orange)
+    );
+  }
+}
+
+/* .spinner {
+  animation: gradient-scroll 2000ms;
+  animation-iteration-count: infinite;
+} */
+
+.gradient-wrapper {
+  border: 1px solid white;
+  padding: 2rem;
+  padding: 6rem 0;
+  position: absolute;
+
+  width: 100%;
+  /* background-image: linear-gradient(
+    to right,
+    var(--color-orange),
+    var(--color-green)
+  ); */
+  background-image: linear-gradient(
+    to right,
+    var(--color-orange),
+    var(--color-green),
+    var(--color-blue),
+    var(--color-purple)
+  );
+  /* transition: all 2000ms; */
+  /* color: transparent; */
+  /* animation: gradient-scroll 20000ms;
+  animation-iteration-count: infinite; */
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+h1 {
+  color: inherit;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 0.8;
+  font-size: 500%;
+  letter-spacing: -5px;
+
+  text-transform: lowercase;
+  /* for gradient debug */
+  color: black;
+}

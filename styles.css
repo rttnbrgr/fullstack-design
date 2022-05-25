@@ -19,92 +19,49 @@
 
 body {
   font-family: sans-serif;
-  color: pink;
-  background: blue;
-  /*  */
 }
 
 .layout-wrapper {
   height: 100vh;
   width: 100vw;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   text-align: right;
   position: relative;
-  border: 2px solid pink;
+  /* debug */
+  /* border: 2px solid yellow; */
 }
 
 @keyframes gradient-scroll {
   0% {
-    /* transform: rotate(0turn) scale(1); */
-    transform: scale(1);
-    /* transition: all 2000ms; */
-    background-image: linear-gradient(
-      to right,
-      var(--color-orange),
-      var(--color-green)
-    );
-    background-image: linear-gradient(to right, orange, green);
+    background-color: var(--color-orange);
   }
-  33% {
-    transform: scale(1.5);
-    background-image: linear-gradient(
-      to right,
-      var(--color-green),
-      var(--color-blue)
-    );
-    background-image: linear-gradient(to right, green, blue);
+  25% {
+    background-color: var(--color-green);
   }
-  66% {
-    background-image: linear-gradient(
-      to right,
-      var(--color-blue),
-      var(--color-purple)
-    );
+  50% {
+    background-color: var(--color-blue);
+  }
+  75% {
+    background-color: var(--color-purple);
   }
   100% {
-    background-image: linear-gradient(
-      to right,
-      var(--color-purple),
-      var(--color-orange)
-    );
+    background-color: var(--color-orange);
   }
 }
 
-/* .spinner {
-  animation: gradient-scroll 2000ms;
-  animation-iteration-count: infinite;
-} */
-
 .gradient-wrapper {
-  border: 1px solid white;
-  padding: 2rem;
-  padding: 6rem 0;
-  position: absolute;
-
-  width: 100%;
-  /* background-image: linear-gradient(
-    to right,
-    var(--color-orange),
-    var(--color-green)
-  ); */
-  background-image: linear-gradient(
-    to right,
-    var(--color-orange),
-    var(--color-green),
-    var(--color-blue),
-    var(--color-purple)
-  );
-  /* transition: all 2000ms; */
-  /* color: transparent; */
-  /* animation: gradient-scroll 20000ms;
-  animation-iteration-count: infinite; */
-
+  padding: 0;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+
+  animation: gradient-scroll 5000ms;
+  animation-iteration-count: infinite;
+  /* Debug */
+  /* border: 1px solid blue; */
 }
 
 h1 {
@@ -113,8 +70,8 @@ h1 {
   font-weight: 700;
   line-height: 0.8;
   font-size: 500%;
+  font-size: 20vw;
   letter-spacing: -5px;
-
   text-transform: lowercase;
   /* for gradient debug */
   color: black;
